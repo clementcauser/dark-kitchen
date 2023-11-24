@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { poppins } from "@/lib/fonts";
 import { PropsWithChildren } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils/shadcn-ui";
 
 export const metadata: Metadata = {
   title: "🍕 Dark Kitchen",
