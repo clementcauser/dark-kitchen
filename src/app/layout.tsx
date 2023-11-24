@@ -14,7 +14,7 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
     <html lang="fr">
       <body
         className={cn(
-          "min-h-screen bg-background font-poppins antialiased",
+          "min-h-screen font-poppins antialiased",
           poppins.variable
         )}
       >
