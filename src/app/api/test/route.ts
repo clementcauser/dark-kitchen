@@ -1,9 +1,8 @@
 import dbConnect from "@/lib/database";
 import Restaurant from "@/lib/models/restaurant";
-import { NextApiRequest } from "next";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-const handler = async (req: NextApiRequest) => {
+const handler = async (req: NextRequest) => {
   // init database connection
   dbConnect();
 
