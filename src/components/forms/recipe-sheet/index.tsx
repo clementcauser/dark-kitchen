@@ -159,22 +159,31 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Table>
+              <Table className="table-fixed lg:table-auto">
                 <TableHeader>
                   <TableRow>
-                    <TableHead id="header-name">
+                    <TableHead className="w-32 lg:w-auto" id="header-name">
                       Nom de l&apos;ingrédient
                     </TableHead>
-                    <TableHead id="header-provider">Fournisseur</TableHead>
-                    <TableHead id="header-unit">Unité</TableHead>
-                    <TableHead id="header-unitPrice">
+                    <TableHead className="w-32 lg:w-auto" id="header-provider">
+                      Fournisseur
+                    </TableHead>
+                    <TableHead className="w-32 lg:w-auto" id="header-unit">
+                      Unité
+                    </TableHead>
+                    <TableHead className="w-32 lg:w-auto" id="header-unitPrice">
                       Coût unitaire HT
                     </TableHead>
-                    <TableHead id="header-quantity">Quantité</TableHead>
-                    <TableHead id="header-ingredientTotalPrice">
+                    <TableHead className="w-32 lg:w-auto" id="header-quantity">
+                      Quantité
+                    </TableHead>
+                    <TableHead
+                      className="w-32 lg:w-auto"
+                      id="header-ingredientTotalPrice"
+                    >
                       Coût de l&apos;ingrédient
                     </TableHead>
-                    <TableHead></TableHead>
+                    <TableHead className="w-32 lg:w-auto"></TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -658,7 +667,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
               </div>
             </CardContent>
           </Card>
-          <div>
+          <div className="lg:flex lg:justify-end">
             <Button type="submit" className="w-full lg:w-auto">
               <Plus className="mr-2 h-4 w-4" /> Créer la recette
             </Button>
