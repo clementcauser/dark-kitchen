@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`form renders correctly 1`] = `
+<div>
+  <form>
+    <div
+      class="space-y-1"
+    >
+      <label
+        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        for=":r0:-form-item"
+      >
+        Nom
+      </label>
+      <input
+        aria-describedby=":r0:-form-item-description"
+        aria-invalid="false"
+        id=":r0:-form-item"
+        name="name"
+        value="default"
+      />
+      <p
+        class="text-xs text-muted-foreground"
+        id=":r0:-form-item-description"
+      >
+        Votre nom de famille
+      </p>
+    </div>
+  </form>
+</div>
+`;
