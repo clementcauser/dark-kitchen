@@ -1,0 +1,810 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
+<div>
+  <form>
+    <div
+      class="flex flex-col gap-4"
+    >
+      <div
+        class="rounded-lg border bg-card text-card-foreground shadow-sm"
+      >
+        <div
+          class="flex flex-col space-y-1.5 p-6"
+        >
+          <h3
+            class="text-2xl font-semibold leading-none tracking-tight"
+          >
+            1. Informations
+          </h3>
+          <p
+            class="text-sm text-muted-foreground"
+          >
+            Commencez par définir les informations de base de votre recette
+          </p>
+        </div>
+        <div
+          class="p-6 pt-0"
+        >
+          <div
+            class="grid grid-cols-4 gap-4"
+          >
+            <div
+              class="space-y-1 col-span-4 md:col-span-2"
+            >
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for=":r0:-form-item"
+              >
+                Titre de la recette *
+              </label>
+              <input
+                aria-describedby=":r0:-form-item-description"
+                aria-invalid="false"
+                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id=":r0:-form-item"
+                name="title"
+                placeholder="Pizza 3 fromages..."
+                value=""
+              />
+              <p
+                class="text-xs text-muted-foreground"
+                id=":r0:-form-item-description"
+              >
+                Ce titre ne sera pas visible par vos clients
+              </p>
+            </div>
+            <div
+              class="hidden lg:block lg:col-span-1"
+            />
+            <div
+              class="space-y-1 col-span-4 md:col-span-2 lg:col-span-1"
+            >
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for=":r1:-form-item"
+              >
+                Temps de réalisation
+              </label>
+              <input
+                aria-describedby=":r1:-form-item-description"
+                aria-invalid="false"
+                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id=":r1:-form-item"
+                name="timeToAchieve"
+                placeholder="1h45m..."
+                value="0"
+              />
+              <p
+                class="text-xs text-muted-foreground"
+                id=":r1:-form-item-description"
+              >
+                Estimez le temps de réalisation (en minutes)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="rounded-lg border bg-card text-card-foreground shadow-sm"
+      >
+        <div
+          class="flex flex-col space-y-1.5 p-6"
+        >
+          <h3
+            class="text-2xl font-semibold leading-none tracking-tight"
+          >
+            2. Ingrédients
+          </h3>
+          <p
+            class="text-sm text-muted-foreground"
+          >
+            Ajoutez les ingrédients nécessaires à votre recette
+          </p>
+        </div>
+        <div
+          class="p-6 pt-0"
+        >
+          <div
+            class="relative w-full overflow-auto"
+          >
+            <table
+              class="w-full caption-bottom text-sm table-fixed lg:table-auto"
+            >
+              <thead
+                class="[&_tr]:border-b"
+              >
+                <tr
+                  class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+                >
+                  <th
+                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-32 lg:w-auto"
+                    id="header-name"
+                  >
+                    Nom de l'ingrédient
+                  </th>
+                  <th
+                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-32 lg:w-auto"
+                    id="header-provider"
+                  >
+                    Fournisseur
+                  </th>
+                  <th
+                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-32 lg:w-auto"
+                    id="header-unit"
+                  >
+                    Unité
+                  </th>
+                  <th
+                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-32 lg:w-auto"
+                    id="header-unitPrice"
+                  >
+                    Coût unitaire HT
+                  </th>
+                  <th
+                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-32 lg:w-auto"
+                    id="header-quantity"
+                  >
+                    Quantité
+                  </th>
+                  <th
+                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-32 lg:w-auto"
+                    id="header-ingredientTotalPrice"
+                  >
+                    Coût de l'ingrédient
+                  </th>
+                  <th
+                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-32 lg:w-auto"
+                  />
+                </tr>
+              </thead>
+              <tbody
+                class="[&_tr:last-child]:border-0"
+              >
+                <tr
+                  class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+                >
+                  <td
+                    class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+                  >
+                    <div
+                      class="space-y-1"
+                    >
+                      <input
+                        aria-describedby="header-name"
+                        aria-invalid="false"
+                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
+                        id=":r2:-form-item"
+                        name="ingredients.0.name"
+                        placeholder="Tomates..."
+                        value=""
+                      />
+                    </div>
+                  </td>
+                  <td
+                    class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+                  >
+                    <div
+                      class="space-y-1"
+                    >
+                      <input
+                        aria-describedby="header-provider"
+                        aria-invalid="false"
+                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
+                        id=":r3:-form-item"
+                        name="ingredients.0.provider"
+                        placeholder="Mon fournisseur..."
+                        value=""
+                      />
+                    </div>
+                  </td>
+                  <td
+                    class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+                  >
+                    <div
+                      class="space-y-1"
+                    >
+                      <input
+                        aria-describedby="header-unit"
+                        aria-invalid="false"
+                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
+                        id=":r4:-form-item"
+                        name="ingredients.0.unit"
+                        placeholder="kg"
+                        value=""
+                      />
+                    </div>
+                  </td>
+                  <td
+                    class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+                  >
+                    <div
+                      class="space-y-1"
+                    >
+                      <input
+                        aria-describedby="header-unitPrice"
+                        aria-invalid="false"
+                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
+                        id=":r5:-form-item"
+                        min="0"
+                        name="ingredients.0.unitPrice"
+                        step="0.01"
+                        type="number"
+                        value="0"
+                      />
+                    </div>
+                  </td>
+                  <td
+                    class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+                  >
+                    <div
+                      class="space-y-1"
+                    >
+                      <input
+                        aria-describedby="header-quantity"
+                        aria-invalid="false"
+                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
+                        id=":r6:-form-item"
+                        min="0"
+                        name="ingredients.0.quantity"
+                        step="0.01"
+                        type="number"
+                        value="0"
+                      />
+                    </div>
+                  </td>
+                  <td
+                    class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+                  >
+                    <div
+                      class="space-y-1"
+                    >
+                      <input
+                        aria-describedby="header-ingredientsTotalPrice"
+                        aria-invalid="false"
+                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
+                        disabled=""
+                        id=":r7:-form-item"
+                        name="ingredients.0.totalPrice"
+                        step="0.01"
+                        type="number"
+                        value="0"
+                      />
+                    </div>
+                  </td>
+                  <td
+                    class="p-4 align-middle [&:has([role=checkbox])]:pr-0 flex items-center gap-2"
+                  >
+                    <button
+                      aria-label="Ajouter un ingrédient"
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 w-10"
+                      title="Ajouter un ingrédient"
+                      type="button"
+                    >
+                      <svg
+                        class="h-4 w-4 text-primary"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 12h14"
+                        />
+                        <path
+                          d="M12 5v14"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      aria-label="Supprimer cet ingrédient"
+                      class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-destructive text-destructive-foreground hover:bg-destructive/90 h-10 w-10"
+                      title="Supprimer cet ingrédient"
+                      type="button"
+                    >
+                      <svg
+                        class="h-4 w-4"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3 6h18"
+                        />
+                        <path
+                          d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"
+                        />
+                        <path
+                          d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"
+                        />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div
+          class="flex items-center p-6 pt-0"
+        >
+          <div
+            class="grid grid-cols-3"
+          >
+            <div
+              class="hidden md:block md:col-span-1 lg:col-span-2"
+            />
+            <div
+              class="col-span-3 md:col-span-2 lg:col-span-1 grid grid-cols-3 gap-4"
+            >
+              <div
+                class="col-span-2 border rounded-md flex items-center px-2"
+              >
+                <p>
+                  Coût total des ingrédients HT
+                </p>
+              </div>
+              <div
+                class="space-y-1"
+              >
+                <input
+                  aria-describedby=":r8:-form-item-description"
+                  aria-invalid="false"
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
+                  disabled=""
+                  id=":r8:-form-item"
+                  name="ingredientsTotalPrice"
+                  type="number"
+                  value="0"
+                />
+              </div>
+              <div
+                class="col-span-2 border rounded-md flex items-center px-2"
+              >
+                <p>
+                  Coût de l'assaisonnement
+                </p>
+                <span
+                  class="ml-2"
+                >
+                  <svg
+                    class="lucide lucide-help-circle"
+                    data-state="closed"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                    />
+                    <path
+                      d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+                    />
+                    <path
+                      d="M12 17h.01"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                class="space-y-1"
+              >
+                <input
+                  aria-describedby=":ra:-form-item-description"
+                  aria-invalid="false"
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
+                  id=":ra:-form-item"
+                  min="0"
+                  name="seasoning"
+                  step="0.01"
+                  type="number"
+                  value="0"
+                />
+              </div>
+              <div
+                class="col-span-2 border rounded-md flex items-center px-2"
+              >
+                <p>
+                  Frais fixes
+                </p>
+                <span
+                  class="ml-2"
+                >
+                  <svg
+                    class="lucide lucide-help-circle"
+                    data-state="closed"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                    />
+                    <path
+                      d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+                    />
+                    <path
+                      d="M12 17h.01"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                class="space-y-1"
+              >
+                <input
+                  aria-describedby=":rc:-form-item-description"
+                  aria-invalid="false"
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
+                  id=":rc:-form-item"
+                  min="0"
+                  name="fixedCosts"
+                  step="0.01"
+                  type="number"
+                  value="0"
+                />
+              </div>
+              <div
+                class="col-span-2 border rounded-md flex items-center"
+              >
+                <p
+                  class="px-2"
+                >
+                  Coût total de la recette HT
+                </p>
+              </div>
+              <div
+                class="space-y-1"
+              >
+                <input
+                  aria-describedby=":rd:-form-item-description"
+                  aria-invalid="false"
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
+                  disabled=""
+                  id=":rd:-form-item"
+                  name="totalRecipeCost"
+                  step="0.01"
+                  type="number"
+                  value="0"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="rounded-lg border bg-card text-card-foreground shadow-sm"
+      >
+        <div
+          class="flex flex-col space-y-1.5 p-6"
+        >
+          <h3
+            class="text-2xl font-semibold leading-none tracking-tight"
+          >
+            3. Informations financières
+          </h3>
+          <p
+            class="text-sm text-muted-foreground"
+          >
+            Définissez votre marge et la TVA pour obtenir les prix de vente
+          </p>
+        </div>
+        <div
+          class="p-6 pt-0"
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          >
+            <div
+              class="col-span-1 grid grid-cols-3 grid-rows-2 md:grid-rows-3 gap-4"
+            >
+              <div
+                class="col-span-2 row-span-1 border rounded-md flex items-center"
+              >
+                <p
+                  class="px-2"
+                >
+                  Taux de marge (%)
+                </p>
+              </div>
+              <div
+                class="space-y-1"
+              >
+                <input
+                  aria-describedby=":re:-form-item-description"
+                  aria-invalid="false"
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
+                  id=":re:-form-item"
+                  min="0"
+                  name="marginRate"
+                  step="0.01"
+                  type="number"
+                  value="0"
+                />
+              </div>
+              <div
+                class="hidden md:block md:row-span-1 md:col-span-2"
+              />
+              <div
+                class="col-span-2 row-span-1 border rounded-md flex items-center"
+              >
+                <p
+                  class="px-2"
+                >
+                  TVA
+                </p>
+              </div>
+              <div
+                class="col-span-1"
+              >
+                <button
+                  aria-autocomplete="none"
+                  aria-controls="radix-:rf:"
+                  aria-expanded="false"
+                  class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1"
+                  data-state="closed"
+                  dir="ltr"
+                  role="combobox"
+                  type="button"
+                >
+                  <span
+                    style="pointer-events: none;"
+                  >
+                    10
+                     %
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    class="h-4 w-4 opacity-50"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m6 9 6 6 6-6"
+                    />
+                  </svg>
+                </button>
+                <select
+                  aria-hidden="true"
+                  style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
+                  tabindex="-1"
+                >
+                  <option
+                    value="5.5"
+                  >
+                    5.5 %
+                  </option>
+                  <option
+                    selected=""
+                    value="10"
+                  >
+                    10 %
+                  </option>
+                  <option
+                    value="20"
+                  >
+                    20 %
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div
+              class="col-span-1 grid grid-cols-3 grid-rows-3 gap-4"
+            >
+              <div
+                class="col-span-2 row-span-1 border rounded-md flex items-center"
+              >
+                <p
+                  class="px-2"
+                >
+                  Marge brute
+                </p>
+              </div>
+              <div
+                class="space-y-1"
+              >
+                <input
+                  aria-describedby=":rg:-form-item-description"
+                  aria-invalid="false"
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
+                  disabled=""
+                  id=":rg:-form-item"
+                  name="margin"
+                  step="0.01"
+                  type="number"
+                  value="0"
+                />
+              </div>
+              <div
+                class="col-span-2 row-span-1 border rounded-md flex items-center"
+              >
+                <p
+                  class="px-2"
+                >
+                  Prix de vente HT
+                </p>
+              </div>
+              <div
+                class="space-y-1"
+              >
+                <input
+                  aria-describedby=":rh:-form-item-description"
+                  aria-invalid="false"
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
+                  disabled=""
+                  id=":rh:-form-item"
+                  name="sellingPriceWithoutTaxes"
+                  step="0.01"
+                  type="number"
+                  value="0"
+                />
+              </div>
+              <div
+                class="col-span-2 row-span-1 border rounded-md flex items-center"
+              >
+                <p
+                  class="px-2"
+                >
+                  Prix de vente TTC
+                </p>
+              </div>
+              <div
+                class="space-y-1"
+              >
+                <input
+                  aria-describedby=":ri:-form-item-description"
+                  aria-invalid="false"
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
+                  disabled=""
+                  id=":ri:-form-item"
+                  name="sellingPriceWithTaxes"
+                  step="0.01"
+                  type="number"
+                  value="0"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="rounded-lg border bg-card text-card-foreground shadow-sm"
+      >
+        <div
+          class="flex flex-col space-y-1.5 p-6"
+        >
+          <h3
+            class="text-2xl font-semibold leading-none tracking-tight"
+          >
+            4. Informations complémentaires
+          </h3>
+          <p
+            class="text-sm text-muted-foreground"
+          >
+            Ajoutez les informations nécessaires pour vous aider à réaliser la recette
+          </p>
+        </div>
+        <div
+          class="p-6 pt-0"
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-4"
+          >
+            <div
+              class="space-y-1"
+            >
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for=":rj:-form-item"
+              >
+                Description de la recette
+              </label>
+              <textarea
+                aria-describedby=":rj:-form-item-description"
+                aria-invalid="false"
+                class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id=":rj:-form-item"
+                name="description"
+                placeholder="Couper les tomates en dés..."
+              />
+              <p
+                class="text-xs text-muted-foreground"
+                id=":rj:-form-item-description"
+              >
+                Décrivez votre recette en étapes pour vous aider à la réaliser.
+              </p>
+            </div>
+            <div
+              class="space-y-1"
+            >
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for=":rk:-form-item"
+              >
+                Matériel nécessaire
+              </label>
+              <textarea
+                aria-describedby=":rk:-form-item-description"
+                aria-invalid="false"
+                class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id=":rk:-form-item"
+                name="equipment"
+                placeholder="- 2 casseroles..."
+              />
+              <p
+                class="text-xs text-muted-foreground"
+                id=":rk:-form-item-description"
+              >
+                Listez le matériel dont vous avez besoin.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="lg:flex lg:justify-end"
+      >
+        <button
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full lg:w-auto"
+          type="submit"
+        >
+          <svg
+            class="mr-2 h-4 w-4"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12h14"
+            />
+            <path
+              d="M12 5v14"
+            />
+          </svg>
+           Créer la recette
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;
