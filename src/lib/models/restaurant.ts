@@ -1,18 +1,10 @@
 import mongoose from "mongoose";
 import { requiredFieldMessage } from "../database/validation";
+import { Restaurant } from "../types/restaurant";
 
-export interface Restaurant extends mongoose.Document {
-  name: string;
-  address: {
-    building: string;
-    street: string;
-    city: string;
-    zipcode: string;
-    coord: number[];
-  };
-}
+type RestaurantModel = Restaurant & mongoose.Document;
 
-const RestaurantSchema = new mongoose.Schema<Restaurant>({
+const RestaurantSchema = new mongoose.Schema<RestaurantModel>({
   name: {
     type: String,
     required: [true, requiredFieldMessage("name")],
@@ -42,4 +34,4 @@ const RestaurantSchema = new mongoose.Schema<Restaurant>({
 });
 
 export default mongoose.models.Restaurant ||
-  mongoose.model<Restaurant>("restaurants", RestaurantSchema);
+  mongoose.model<RestaurantModel>("restaurants", RestaurantSchema);
