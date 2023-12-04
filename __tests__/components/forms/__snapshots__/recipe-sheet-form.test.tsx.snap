@@ -109,7 +109,7 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
             class="relative w-full overflow-auto"
           >
             <table
-              class="w-full caption-bottom text-sm table-fixed lg:table-auto"
+              class="w-full caption-bottom text-sm"
             >
               <thead
                 class="[&_tr]:border-b"
@@ -118,43 +118,43 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
                   class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
                 >
                   <th
-                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-32 lg:w-auto"
+                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
                     id="header-name"
                   >
                     Nom de l'ingrédient
                   </th>
                   <th
-                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-32 lg:w-auto"
+                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
                     id="header-provider"
                   >
                     Fournisseur
                   </th>
                   <th
-                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-32 lg:w-auto"
+                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
                     id="header-unit"
                   >
                     Unité
                   </th>
                   <th
-                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-32 lg:w-auto"
+                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
                     id="header-unitPrice"
                   >
                     Coût unitaire HT
                   </th>
                   <th
-                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-32 lg:w-auto"
+                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
                     id="header-quantity"
                   >
                     Quantité
                   </th>
                   <th
-                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-32 lg:w-auto"
+                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
                     id="header-ingredientTotalPrice"
                   >
                     Coût de l'ingrédient
                   </th>
                   <th
-                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 w-32 lg:w-auto"
+                    class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
                   />
                 </tr>
               </thead>
@@ -276,9 +276,8 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
                     class="p-4 align-middle [&:has([role=checkbox])]:pr-0 flex items-center gap-2"
                   >
                     <button
-                      aria-label="Ajouter un ingrédient"
                       class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 w-10"
-                      title="Ajouter un ingrédient"
+                      data-state="closed"
                       type="button"
                     >
                       <svg
@@ -302,9 +301,8 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
                       </svg>
                     </button>
                     <button
-                      aria-label="Supprimer cet ingrédient"
                       class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-destructive text-destructive-foreground hover:bg-destructive/90 h-10 w-10"
-                      title="Supprimer cet ingrédient"
+                      data-state="closed"
                       type="button"
                     >
                       <svg
@@ -359,11 +357,11 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
                 class="space-y-1"
               >
                 <input
-                  aria-describedby=":r8:-form-item-description"
+                  aria-describedby=":ra:-form-item-description"
                   aria-invalid="false"
                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
                   disabled=""
-                  id=":r8:-form-item"
+                  id=":ra:-form-item"
                   name="ingredientsTotalPrice"
                   type="number"
                   value="0"
@@ -409,10 +407,10 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
                 class="space-y-1"
               >
                 <input
-                  aria-describedby=":ra:-form-item-description"
+                  aria-describedby=":rc:-form-item-description"
                   aria-invalid="false"
                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
-                  id=":ra:-form-item"
+                  id=":rc:-form-item"
                   min="0"
                   name="seasoning"
                   step="0.01"
@@ -460,10 +458,10 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
                 class="space-y-1"
               >
                 <input
-                  aria-describedby=":rc:-form-item-description"
+                  aria-describedby=":re:-form-item-description"
                   aria-invalid="false"
                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
-                  id=":rc:-form-item"
+                  id=":re:-form-item"
                   min="0"
                   name="fixedCosts"
                   step="0.01"
@@ -484,11 +482,11 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
                 class="space-y-1"
               >
                 <input
-                  aria-describedby=":rd:-form-item-description"
+                  aria-describedby=":rf:-form-item-description"
                   aria-invalid="false"
                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
                   disabled=""
-                  id=":rd:-form-item"
+                  id=":rf:-form-item"
                   name="totalRecipeCost"
                   step="0.01"
                   type="number"
@@ -538,10 +536,10 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
                 class="space-y-1"
               >
                 <input
-                  aria-describedby=":re:-form-item-description"
+                  aria-describedby=":rg:-form-item-description"
                   aria-invalid="false"
                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
-                  id=":re:-form-item"
+                  id=":rg:-form-item"
                   min="0"
                   name="marginRate"
                   step="0.01"
@@ -566,7 +564,7 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
               >
                 <button
                   aria-autocomplete="none"
-                  aria-controls="radix-:rf:"
+                  aria-controls="radix-:rh:"
                   aria-expanded="false"
                   class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1"
                   data-state="closed"
@@ -638,11 +636,11 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
                 class="space-y-1"
               >
                 <input
-                  aria-describedby=":rg:-form-item-description"
+                  aria-describedby=":ri:-form-item-description"
                   aria-invalid="false"
                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
                   disabled=""
-                  id=":rg:-form-item"
+                  id=":ri:-form-item"
                   name="margin"
                   step="0.01"
                   type="number"
@@ -662,11 +660,11 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
                 class="space-y-1"
               >
                 <input
-                  aria-describedby=":rh:-form-item-description"
+                  aria-describedby=":rj:-form-item-description"
                   aria-invalid="false"
                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
                   disabled=""
-                  id=":rh:-form-item"
+                  id=":rj:-form-item"
                   name="sellingPriceWithoutTaxes"
                   step="0.01"
                   type="number"
@@ -686,11 +684,11 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
                 class="space-y-1"
               >
                 <input
-                  aria-describedby=":ri:-form-item-description"
+                  aria-describedby=":rk:-form-item-description"
                   aria-invalid="false"
                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 col-span-1"
                   disabled=""
-                  id=":ri:-form-item"
+                  id=":rk:-form-item"
                   name="sellingPriceWithTaxes"
                   step="0.01"
                   type="number"
@@ -729,21 +727,21 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
             >
               <label
                 class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for=":rj:-form-item"
+                for=":rl:-form-item"
               >
                 Description de la recette
               </label>
               <textarea
-                aria-describedby=":rj:-form-item-description"
+                aria-describedby=":rl:-form-item-description"
                 aria-invalid="false"
                 class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                id=":rj:-form-item"
+                id=":rl:-form-item"
                 name="description"
                 placeholder="Couper les tomates en dés..."
               />
               <p
                 class="text-xs text-muted-foreground"
-                id=":rj:-form-item-description"
+                id=":rl:-form-item-description"
               >
                 Décrivez votre recette en étapes pour vous aider à la réaliser.
               </p>
@@ -753,21 +751,21 @@ exports[`recipe-sheet-form should render correctly: recipe-sheet-form 1`] = `
             >
               <label
                 class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for=":rk:-form-item"
+                for=":rm:-form-item"
               >
                 Matériel nécessaire
               </label>
               <textarea
-                aria-describedby=":rk:-form-item-description"
+                aria-describedby=":rm:-form-item-description"
                 aria-invalid="false"
                 class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                id=":rk:-form-item"
+                id=":rm:-form-item"
                 name="equipment"
                 placeholder="- 2 casseroles..."
               />
               <p
                 class="text-xs text-muted-foreground"
-                id=":rk:-form-item-description"
+                id=":rm:-form-item-description"
               >
                 Listez le matériel dont vous avez besoin.
               </p>
