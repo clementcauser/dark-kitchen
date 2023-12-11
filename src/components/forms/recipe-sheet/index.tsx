@@ -159,31 +159,22 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Table className="table-fixed lg:table-auto">
+              <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead className="w-32 lg:w-auto" id="header-name">
+                    <TableHead id="header-name">
                       Nom de l&apos;ingrédient
                     </TableHead>
-                    <TableHead className="w-32 lg:w-auto" id="header-provider">
-                      Fournisseur
-                    </TableHead>
-                    <TableHead className="w-32 lg:w-auto" id="header-unit">
-                      Unité
-                    </TableHead>
-                    <TableHead className="w-32 lg:w-auto" id="header-unitPrice">
+                    <TableHead id="header-provider">Fournisseur</TableHead>
+                    <TableHead id="header-unit">Unité</TableHead>
+                    <TableHead id="header-unitPrice">
                       Coût unitaire HT
                     </TableHead>
-                    <TableHead className="w-32 lg:w-auto" id="header-quantity">
-                      Quantité
-                    </TableHead>
-                    <TableHead
-                      className="w-32 lg:w-auto"
-                      id="header-ingredientTotalPrice"
-                    >
+                    <TableHead id="header-quantity">Quantité</TableHead>
+                    <TableHead id="header-ingredientsTotalPrice">
                       Coût de l&apos;ingrédient
                     </TableHead>
-                    <TableHead className="w-32 lg:w-auto"></TableHead>
+                    <TableHead></TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -199,7 +190,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                                 <FormControl>
                                   <Input
                                     {...field}
-                                    aria-describedby="header-name"
+                                    aria-labelledby="header-name"
                                     className={cn(
                                       "col-span-1",
                                       fieldState?.error && "border-destructive"
@@ -225,7 +216,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                                       "col-span-1",
                                       fieldState?.error && "border-destructive"
                                     )}
-                                    aria-describedby="header-provider"
+                                    aria-labelledby="header-provider"
                                     key={arrayField.id}
                                     placeholder="Mon fournisseur..."
                                   />
@@ -248,7 +239,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                                       fieldState?.error && "border-destructive"
                                     )}
                                     key={arrayField.id}
-                                    aria-describedby="header-unit"
+                                    aria-labelledby="header-unit"
                                     placeholder="kg"
                                   />
                                 </FormControl>
@@ -270,7 +261,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                                       fieldState?.error && "border-destructive"
                                     )}
                                     key={arrayField.id}
-                                    aria-describedby="header-unitPrice"
+                                    aria-labelledby="header-unitPrice"
                                     type="number"
                                     step="0.01"
                                     min={0}
@@ -298,7 +289,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                                       fieldState?.error && "border-destructive"
                                     )}
                                     key={arrayField.id}
-                                    aria-describedby="header-quantity"
+                                    aria-labelledby="header-quantity"
                                     type="number"
                                     step="0.01"
                                     min={0}
@@ -328,7 +319,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                                     disabled
                                     type="number"
                                     step="0.01"
-                                    aria-describedby="header-ingredientsTotalPrice"
+                                    aria-labelledby="header-ingredientsTotalPrice"
                                   />
                                 </FormControl>
                               </FormItem>
@@ -336,29 +327,51 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                           />
                         </TableCell>
                         <TableCell className="flex items-center gap-2">
-                          <Button
-                            type="button"
-                            variant="secondary"
-                            size="icon"
-                            aria-label="Ajouter un ingrédient"
-                            title="Ajouter un ingrédient"
-                            onClick={() =>
-                              /** TODO: Validate row before appending */
-                              append(recipeRowDefaultValues)
-                            }
-                          >
-                            <Plus className="h-4 w-4 text-primary" />
-                          </Button>
-                          <Button
-                            type="button"
-                            size="icon"
-                            variant="destructive"
-                            aria-label="Supprimer cet ingrédient"
-                            title="Supprimer cet ingrédient"
-                            onClick={() => remove(index)}
-                          >
-                            <Trash className="h-4 w-4" />
-                          </Button>
+                          <TooltipProvider>
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <Button
+                                  type="button"
+                                  variant="secondary"
+                                  size="icon"
+                                  onClick={() =>
+                                    /** TODO: Validate row before appending */
+                                    append(recipeRowDefaultValues)
+                                  }
+                                >
+                                  <Plus className="h-4 w-4 text-primary" />
+                                  <span className="sr-only">
+                                    Ajouter un ingrédient
+                                  </span>
+                                </Button>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p>Ajouter un ingrédient</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                          <TooltipProvider>
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <Button
+                                  type="button"
+                                  size="icon"
+                                  variant="destructive"
+                                  onClick={() => remove(index)}
+                                >
+                                  <Trash className="h-4 w-4" />
+                                  <span className="sr-only">
+                                    Supprimer cet ingrédient
+                                  </span>
+                                </Button>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p className="text-destructive">
+                                  Supprimer cet ingrédient
+                                </p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
                         </TableCell>
                       </TableRow>
                     ))}
@@ -378,7 +391,9 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                 <div className="hidden md:block md:col-span-1 lg:col-span-2" />
                 <div className="col-span-3 md:col-span-2 lg:col-span-1 grid grid-cols-3 gap-4">
                   <div className="col-span-2 border rounded-md flex items-center px-2">
-                    <p>Coût total des ingrédients HT</p>
+                    <p id="label-ingredientsTotalPrice">
+                      Coût total des ingrédients HT
+                    </p>
                   </div>
                   <FormField
                     control={form.control}
@@ -391,6 +406,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                             {...field}
                             className="col-span-1"
                             type="number"
+                            aria-labelledby="label-ingredientsTotalPrice"
                           />
                         </FormControl>
                         <FormMessage />
@@ -398,7 +414,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                     )}
                   />
                   <div className="col-span-2 border rounded-md flex items-center px-2">
-                    <p>Coût de l&apos;assaisonnement</p>
+                    <p id="label-seasoning">Coût de l&apos;assaisonnement</p>
                     <span className="ml-2">
                       <TooltipProvider>
                         <Tooltip>
@@ -424,6 +440,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                             type="number"
                             step="0.01"
                             min={0}
+                            aria-labelledby="label-seasoning"
                           />
                         </FormControl>
                         <FormMessage />
@@ -431,7 +448,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                     )}
                   />
                   <div className="col-span-2 border rounded-md flex items-center px-2">
-                    <p>Frais fixes</p>
+                    <p id="label-fixedCosts">Frais fixes</p>
                     <span className="ml-2">
                       <TooltipProvider>
                         <Tooltip>
@@ -457,6 +474,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                             type="number"
                             step="0.01"
                             min={0}
+                            aria-labelledby="label-fixedCosts"
                           />
                         </FormControl>
                         <FormMessage />
@@ -464,7 +482,9 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                     )}
                   />
                   <div className="col-span-2 border rounded-md flex items-center">
-                    <p className="px-2">Coût total de la recette HT</p>
+                    <p id="label-totalRecipeCost" className="px-2">
+                      Coût total de la recette HT
+                    </p>
                   </div>
                   <FormField
                     control={form.control}
@@ -478,6 +498,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                             className="col-span-1"
                             type="number"
                             step="0.01"
+                            aria-labelledby="label-totalRecipeCost"
                           />
                         </FormControl>
                         <FormMessage />
@@ -500,7 +521,9 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="col-span-1 grid grid-cols-3 grid-rows-2 md:grid-rows-3 gap-4">
                   <div className="col-span-2 row-span-1 border rounded-md flex items-center">
-                    <p className="px-2">Taux de marge (%)</p>
+                    <p className="px-2" id="label-marginRate">
+                      Taux de marge (%)
+                    </p>
                   </div>
                   <FormField
                     control={form.control}
@@ -514,6 +537,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                             type="number"
                             min={0}
                             step="0.01"
+                            aria-labelledby="label-marginRate"
                           />
                         </FormControl>
                         <FormMessage />
@@ -522,7 +546,9 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                   />
                   <div className="hidden md:block md:row-span-1 md:col-span-2" />
                   <div className="col-span-2 row-span-1 border rounded-md flex items-center">
-                    <p className="px-2">TVA</p>
+                    <p className="px-2" id="label-taxRate">
+                      TVA
+                    </p>
                   </div>
                   <div className="col-span-1">
                     <FormField
@@ -534,7 +560,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                           value={field.value.toString()}
                           defaultValue={field.value.toString()}
                         >
-                          <SelectTrigger>
+                          <SelectTrigger aria-label="Sélectionner une TVA">
                             <SelectValue />
                           </SelectTrigger>
                           <SelectContent>
@@ -552,7 +578,9 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
 
                 <div className="col-span-1 grid grid-cols-3 grid-rows-3 gap-4">
                   <div className="col-span-2 row-span-1 border rounded-md flex items-center">
-                    <p className="px-2">Marge brute</p>
+                    <p className="px-2" id="label-margin">
+                      Marge brute
+                    </p>
                   </div>
                   <FormField
                     control={form.control}
@@ -566,6 +594,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                             className="col-span-1"
                             type="number"
                             step="0.01"
+                            aria-labelledby="label-margin"
                           />
                         </FormControl>
                         <FormMessage />
@@ -573,7 +602,9 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                     )}
                   />
                   <div className="col-span-2 row-span-1 border rounded-md flex items-center">
-                    <p className="px-2">Prix de vente HT</p>
+                    <p className="px-2" id="label-sellingPriceWithoutTaxes">
+                      Prix de vente HT
+                    </p>
                   </div>
                   <FormField
                     control={form.control}
@@ -587,6 +618,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                             className="col-span-1"
                             type="number"
                             step="0.01"
+                            aria-labelledby="label-sellingPriceWithoutTaxes"
                           />
                         </FormControl>
                         <FormMessage />
@@ -594,7 +626,9 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                     )}
                   />
                   <div className="col-span-2 row-span-1 border rounded-md flex items-center">
-                    <p className="px-2">Prix de vente TTC</p>
+                    <p className="px-2" id="label-sellingPriceWithTaxes">
+                      Prix de vente TTC
+                    </p>
                   </div>
                   <FormField
                     control={form.control}
@@ -608,6 +642,7 @@ const RecipeSheetForm = ({ recipe, onSubmitSuccess }: RecipeSheetFormProps) => {
                             className="col-span-1"
                             type="number"
                             step="0.01"
+                            aria-labelledby="label-sellingPriceWithTaxes"
                           />
                         </FormControl>
                         <FormMessage />
