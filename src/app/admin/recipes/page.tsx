@@ -5,7 +5,7 @@ import { getTextStyle } from "@/components/ui/text";
 
 export default function Page() {
   return (
-    <main className="min-h-screen max-w-7xl bg-card p-4 m-auto rounded-md">
+    <div className="bg-card p-4 rounded-md">
       <div className="mb-6">
         <h1 className={getTextStyle("h1")}>Fiche de recette</h1>
         <p className="text-sm text-muted-foreground w-2/3">
@@ -16,6 +16,6 @@ export default function Page() {
       </div>
 
       <RecipeSheetForm onSubmitSuccess={() => console.log("SUBMITTED")} />
-    </main>
+    </div>
   );
 }
